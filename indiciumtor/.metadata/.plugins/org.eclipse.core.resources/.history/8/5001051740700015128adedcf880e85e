@@ -1,0 +1,15 @@
+import java.io.UnsupportedEncodingException;
+
+	import java.net.URLEncoder;
+
+	public class URLEncoderTest {
+	    public static void main(String[] args) {
+	        try {
+	            String string = "The string ü@foo-bar";
+	            String encodedString = URLEncoder.encode(string, "UTF-8");
+	            System.out.println("Encoded String: " + encodedString);
+	        } catch (UnsupportedEncodingException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}

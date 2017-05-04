@@ -1,0 +1,59 @@
+import java.io.UnsupportedEncodingException;
+02
+	import java.net.URLEncoder;
+03
+	 
+04
+	/**
+05
+	 * @author ashraf_sarhan
+06
+	 *
+07
+	 */
+08
+	public class URLEncoderTest {
+09
+	 
+10
+	     
+11
+	    /**
+12
+	     * The main method.
+13
+	     *
+14
+	     * @param args the arguments
+15
+	     */
+16
+	    public static void main(String[] args) {
+17
+	        try {
+18
+	 
+19
+	            String string = "The string ü@foo-bar";
+20
+	 
+21
+	            String encodedString = URLEncoder.encode(string, "UTF-8");
+22
+	 
+23
+	            System.out.println("Encoded String: " + encodedString);
+24
+	 
+25
+	        } catch (UnsupportedEncodingException e) {
+26
+	            e.printStackTrace();
+27
+	        }
+28
+	    }
+29
+	 
+30
+	}
